@@ -1,0 +1,191 @@
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+.alert{
+    max-width: 75%;
+    border-left: 4px solid darkred ;
+    margin-left: 20px;
+border-radius: 4px 25px 25px 4px;
+font-size: 18px;
+font-weight: bold;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
+* {
+  outline:none;
+}
+body {
+  background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/debut_dark.png);
+  background-color:#333;
+  font-family: 'Open Sans', sans-serif;
+}
+#pizza {
+  width:100%;
+  margin: 0;
+  background-image:url(https://subtlepatterns.com/patterns/purty_wood.png);
+  box-sizing:border-box;
+  padding: 24px 30px 14px 30px;
+  border-radius:8px 8px 0 0;
+  background-color:#EAC995;
+  border:1px solid #EAC995;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+}
+textarea {
+  box-sizing:border-box;
+  width:100%;
+  min-width:100%;
+  max-width:100%;
+  border-radius:4px;
+  border:none;
+  height:100px;
+  padding:8px;
+  font-size:14px;
+  color:#444;
+  font-family: 'Courier New', 'Courier', monospace;
+  transition: box-shadow 0.2s ease;
+}
+textarea:focus {
+}
+ .button {
+  margin-top:10px;
+  border:none;
+  margin-right:10px;
+  display: block;
+  float:left;
+  background-color: #1B79C7;
+  line-height: 1;
+  padding: 6px 20px 6px 20px;
+  color: white;
+  text-shadow: 0px -1px 0px #0C3658;
+  border-radius: 4px;
+  box-shadow: 0px 3px 0px #0C3658, 0px 3px 14px rgba(0,0,0,0.6);
+  transition: background-color 0.1s ease;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none !important;
+  cursor:pointer;
+  position:relative;
+}
+/* input:hover, .button:hover {
+  background-color: #2E92E2;
+}
+input:active, .button:active {  
+  bottom: -2px;
+  box-shadow: 0px 1px 0px #0C3658, 0px 2px 14px rgba(0,0,0,0.6);
+  color: white;
+} */
+#hamburger {
+  width:100%;
+  margin:0;
+  box-sizing:border-box;
+  padding: 20px 30px 20px 30px;
+  border-radius:0 0 8px 8px;
+  background-color:#444;
+  border:1px solid #444;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+  background-image:url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png);
+  color:#FFF;
+  text-shadow:0px 1px 5px #000;
+  font-size:14px;
+}
+#table {
+  width:600px;
+  margin:40px auto 20px auto;
+  border-radius:8px;
+  box-shadow: 0px 2px 20px rgba(0,0,0,0.5);
+}
+#pizza:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+#table a {
+  color:#FFF;
+  text-decoration:underline;
+
+}
+  
+#table{
+    margin-top: 0   !important;
+    margin-left: 0   !important;
+    width: 80%   !important;
+}
+
+#fixinput{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    cursor: unset;
+
+}
+
+h1,.alert{
+    margin-bottom: -20px;
+}
+
+
+.big{
+    color: darkcyan ;
+    font-size: 16px;
+    font-family: Courier New, Courier, monospace ;  
+}
+
+.styled {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+    font-family: Tahoma, sans-serif;
+    border: 2px solid aqua;
+box-shadow:unset;
+	/* background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat; */
+}

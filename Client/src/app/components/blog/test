@@ -1,0 +1,50 @@
+      <div id="table" *ngIf="newPost">
+        <div id="pizza">
+          <form name="blogForm" *ngIf="newPost" (submit)="onBlogSubmit()" [formGroup]="form">
+            <!-- title -->
+            <div class="form-group">
+              <label for="title">
+                <strong> Title
+                  <i class="fa-tint fa fa-fw"></i>: </strong>
+              </label>
+              <div [ngClass]="{'has-success':form.controls.title.valid   ,'has-error':form.controls.title.dirty &&form.controls.title.errors }">
+                <input type="text" name="title" id="fixinput" class="form-control" placeholder="Blog Title" autocomplete="off" formControlName="title">
+
+                <ul class="help-block">
+                  <li *ngIf="form.controls.title.dirty &&form.controls.title.errors?.required">this field is required</li>
+                  <li *ngIf="(form.controls.title.dirty &&form.controls.title.errors?.minlength) ||(form.controls.title.dirty &&form.controls.title.errors?.maxlength)">Max length:50 , Min length : 5 </li>
+                  <li *ngIf="form.controls.title.dirty && form.controls.title.errors?.alphanumericValidation">Must Be Letters And Numbers</li>
+                </ul>
+              </div>
+            </div>
+            <!-- title  -->
+
+            <!-- body -->
+            <div class="form-group">
+              <label for="body">
+                <strong> Your Post
+                  <i class="fa-edit fa fa-fw"></i>: </strong>
+              </label>
+              <div [ngClass]="{'has-success':form.controls.body.valid   ,'has-error':form.controls.body.dirty &&form.controls.body.errors }">
+                <textarea class="form-control" placeholder="Body Blog" name="body" id="" cols="30" rows="10" formControlName="body"></textarea>
+                <ul class="help-block">
+                  <li *ngIf="form.controls.body.dirty &&form.controls.body.errors?.required">this field is required</li>
+                  <li *ngIf="(form.controls.body.dirty &&form.controls.body.errors?.minlength) ||(form.controls.body.dirty &&form.controls.body.errors?.maxlength)">Max length:220 , Min length : 5 </li>
+
+                </ul>
+              </div>
+            </div>
+            <!-- body  -->
+
+            <button [disabled]="proccessing" type="button" class="btn btn-large  btn-warning" (click)="goBack()">Go Back</button>
+
+            <button [disabled]="proccessing || !form.valid" type="submit" class="btn btn-large  btn-primary ">Post
+              <i class="fa fa-fw fa-send"></i>
+            </button>
+
+          </form>
+        </div>
+        <div id="hamburger">
+        </div>
+      </div>
+      <!--New Blog form  -->

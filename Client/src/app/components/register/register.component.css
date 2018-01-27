@@ -1,0 +1,14 @@
+div label{
+    color:darkblue;
+    font: bold 18px; 
+}
+
+h1{
+    color: firebrick ;
+}
+
+.alert{
+    font: 19px bold ;
+    border-left: 6px firebrick solid;
+    border-radius: 10px 30px 30px 15px  ;
+}

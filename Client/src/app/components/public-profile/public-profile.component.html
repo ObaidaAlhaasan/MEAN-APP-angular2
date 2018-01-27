@@ -1,0 +1,31 @@
+<h1 class="page-header">
+  PublicProfile
+</h1>
+
+<div *ngIf="message" class="row show-hide-message">
+  <div [ngClass]="messageClass">
+    {{message}}
+  </div>
+</div>
+<div class="row" >
+  <div class="col-xs-10" class="animated bounceInDown">
+    <table>
+      <thead>
+          <tr>
+              <th>User Name</th>
+              <th>E-mail</th>
+             
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>{{username}}</td>
+              <td>{{email}}</td>
+          </tr>
+    
+    
+      </tbody>
+    </table>
+
+  </div>
+</div>

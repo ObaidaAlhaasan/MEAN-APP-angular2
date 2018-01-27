@@ -1,0 +1,70 @@
+<div class="row show-hide-message" *ngIf="message">
+  <div [ngClass]="messageClass">
+    {{message}}
+  </div>
+</div>
+
+
+<div class="row" id="main" class="animated fadeInDownBig" *ngIf="!loading">
+
+  <div class="col-md-11 well" id="rightPanel">
+    <div class="row">
+      <div class="col-md-12">
+
+        <form class="form-group" role="form" (submit)="updateBlogSubmit()">
+          <h2>Edit your post.
+            <small>It's always easy</small>
+          </h2>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label for="title">Edit Title</label>
+                <input  [disabled]="proccessing" type="text"   name="title"  [(ngModel)]="blog.title" class="form-control">
+
+              </div>
+
+              <div class="form-group">
+                <label for="body">Edit Post</label>
+                <textarea [disabled]="proccessing" cols="25" rows="5"  name="body" [(ngModel)]="blog.body" class="form-control input-lg"> </textarea>
+
+
+              </div>
+            </div>
+          </div>
+
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-12 col-md-10">
+                <a [routerLink]="['/delete-blog/',blog._id]"><button class="btn btn-danger" [disabled]="proccessing">Delete <i class="fa fa-fw fa-close"></i> </button></a>
+
+                <button (click)="goBack()" [disabled]="proccessing" class="btn btn-info"  >Go Back<i class="fa fa-fw fa-sign-out" ></i> </button>
+
+              <button [disabled]="proccessing" type="submit" class="btn btn-success">Save Changes <i class=" fa fa-fw fa-save"></i> </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+  </div>
+</div>
