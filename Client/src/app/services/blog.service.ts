@@ -26,7 +26,7 @@ export class BlogService {
 
   newBlog(blog){
     this.createAuthenticationHeaders();
-    return this.http.post("http://localhost:8080/blogs/newBlog",blog ,this.options ).map(res=>res.json());
+    return this.http.post(this.domain+"blogs/newBlog",blog ,this.options ).map(res=>res.json());
   }
 
   getAllBlogs(){
